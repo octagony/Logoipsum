@@ -1,0 +1,385 @@
+@import "variables.scss";
+@import "mixins.scss";
+
+@font-face {
+  font-family: "DM Sans";
+  src: url("../fonts/DMSans-Bold.woff2") format("woff2"),
+    url("../fonts/DMSans-Bold.woff") format("woff"),
+    url("../fonts/DMSans-Bold.ttf") format("ttf");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Mulish";
+  src: url("../fonts/Mulish-Regular.woff2") format("woff2"),
+    url("../fonts/Mulish-Regular.woff") format("woff"),
+    url("../fonts/Mulish-Regular.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DM Sans";
+  src: url("../fonts/DMSans-Regular.woff2") format("woff2"),
+    url("../fonts/DMSans-Regular.woff") format("woff"),
+    url("../fonts/DMSans-Regular.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  font-size: $mainFont;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  box-shadow: none;
+  outline: #000 dotted 2px;
+  outline-offset: 0.05em;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+//navbar
+
+.btn.btn-lg.btn-primary.ipsum__btn {
+  background: $color1;
+  color: $fwhite;
+  font-weight: 700;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    background: $color2;
+  }
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: $stc;
+  transition: color 0.5s ease-in-out;
+  font-weight: 700;
+  padding-bottom: 0.5em;
+  border-bottom: 2px solid #fff;
+  transition: all 0.5s ease-in-out;
+  &:hover {
+    color: $mtc;
+    border-bottom: 2px solid $color2;
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+.navbar-nav.me-auto.mb-2.mb-lg-0.mx-auto.d-flex {
+  gap: 50px;
+}
+
+.header .btn-group-lg > .btn,
+.btn-lg {
+  @include buttons($color1, 14em, $fwhite);
+  padding: 1em 4em;
+  border-color: $color1;
+  transition: all 0.5s ease-in-out;
+  font-weight: 700;
+  &:hover {
+    background-color: $color2;
+    border-color: $color2;
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+//header
+
+.header__main {
+  margin-top: 6em;
+}
+
+.main--title {
+  font-size: 80px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.sub--desc {
+  font-size: 20px;
+  line-height: 1.5;
+  color: $stc;
+  max-width: 25em;
+}
+
+.arrow__down {
+  display: inline-block;
+  margin-left: 2.5em;
+  border: 1px solid #e7e7e7;
+  padding: 1em;
+  border-radius: 50%;
+}
+
+.btn.btn-lg.btn-primary.ipsum__btn2.ipsum__btn2 {
+  @include buttons($color2, 14em, $fwhite);
+  padding: 1.5em 4em;
+  border-color: $color2;
+  transition: all 0.5s ease-in-out;
+  font-weight: 700;
+  &:hover {
+    background-color: $color1;
+    border-color: $color1;
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+.ipsum__header.header--img {
+  margin-left: 5em;
+}
+
+//about
+.ipsum__about--title {
+  font-size: 50px;
+  line-height: 1.2;
+  color: $mtc;
+  font-weight: bold;
+}
+
+.ipsum__about__link {
+  font-size: 17px;
+  line-height: 22px;
+  color: $color2;
+  transition: color 0.5s ease-in-out;
+  &:hover {
+    color: $color1;
+    transition: color 0.3s ease-in-out;
+  }
+}
+
+//Cards
+
+.cards {
+  margin-top: 5em;
+}
+
+.card {
+  border-style: none;
+}
+
+.card-title {
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 700;
+  color: $mtc;
+}
+
+.card-text {
+  font-size: 16px;
+  line-height: 24px;
+  color: $stc;
+}
+
+//prices
+.prices {
+  margin-top: 5em;
+}
+
+.prices__title {
+  font-weight: bold;
+  font-size: 60px;
+  font-weight: 700;
+  color: $mtc;
+  max-width: 535px;
+}
+
+.btn-group {
+  min-width: 316px;
+}
+
+.btn-primary {
+  font-size: 16px;
+  line-height: 21px;
+  padding: 1.5em 0;
+  background: #f7f7fb;
+  border-radius: 10px;
+  border-style: none;
+  color: $mtc;
+  font-weight: 700;
+  transition: 0.5s all ease-in-out;
+  &:hover {
+    background: $color1;
+  }
+}
+
+.prices__active {
+  background-color: $color2;
+  color: $fwhite;
+}
+
+.sup--title {
+  font-size: 18px;
+  line-height: 28px;
+  color: $stc;
+}
+
+.card--title {
+  font-size: 60px;
+  line-height: 56px;
+  font-weight: 700;
+}
+
+.card--info {
+  font-size: 17px;
+  line-height: 50px;
+  color: $stc;
+}
+
+.price__btn {
+  font-size: 18.75px;
+  background-color: transparent;
+  border-style: none;
+  color: $color2;
+}
+
+//footer
+.footer {
+  font-size: 17px;
+  line-height: 50px;
+  color: $stc;
+}
+
+.git__link {
+  transition: all 0.5s ease-in-out;
+  &:hover {
+    color: $color1;
+    transition: all 0.5s ease-in-out;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .card--title,
+  .text-muted {
+    font-size: 50px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .navbar-nav.me-auto.mb-2.mb-lg-0.mx-auto.d-flex {
+    gap: 20px;
+    text-align: center;
+  }
+  .btn.btn-lg.btn-primary.ipsum__btn {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    width: 30px;
+  }
+
+  .navbar-toggler {
+    border-style: none;
+    outline: none;
+  }
+  .navbar-toggler:focus {
+    box-shadow: none;
+  }
+  .header--img {
+    display: none;
+  }
+  .ipsum__main__text {
+    text-align: center;
+  }
+  .sub--desc {
+    max-width: none;
+  }
+  .arrow__down {
+    display: block;
+    border-style: none;
+    margin: 1em auto;
+  }
+  .list-inline-item:nth-child(even) {
+    display: none;
+  }
+  .about__block1,
+  .about__block2 {
+    text-align: center;
+    padding: 2em;
+  }
+  .about__text {
+    margin-bottom: 2em;
+  }
+  .price__btn {
+    min-width: 0;
+    width: auto;
+    padding: 1em 2em;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .prices__b1 {
+    flex-direction: column;
+    margin-bottom: 2em;
+    text-align: center;
+  }
+  .prices__btn {
+    margin-top: 2em;
+  }
+
+  .prices .card {
+    box-shadow: 0px 0px 0px 2px $color2;
+    padding: 1em 2em;
+  }
+}
+
+@media screen and (max-width: 534px) {
+  .main--title {
+    font-size: 65px;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .main--title {
+    font-size: 55px;
+  }
+  .sub--desc {
+    font-size: 18px;
+  }
+  .list-inline.d-flex.justify-content-between {
+    flex-direction: column;
+    align-items: center;
+    gap: 3em;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .main--title {
+    font-size: 46px;
+  }
+  .sub--desc {
+    font-size: 17px;
+  }
+  .ipsum__about--title {
+    font-size: 40px;
+  }
+  .footer__inner {
+    flex-direction: column;
+    align-items: center;
+  }
+}
