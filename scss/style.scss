@@ -67,6 +67,11 @@ body {
   line-height: 1.4;
 }
 
+.btn-check:focus + .btn-primary,
+.btn-primary:focus {
+  border-color: initial;
+}
+
 //navbar
 
 .btn.btn-lg.btn-primary.ipsum__btn {
@@ -182,6 +187,7 @@ body {
 
 .card {
   border-style: none;
+  padding: 2em 0;
 }
 
 .card-title {
@@ -194,7 +200,24 @@ body {
 .card-text {
   font-size: 16px;
   line-height: 24px;
-  color: $stc;
+}
+
+.card__active {
+  background: $color1;
+  color: $fwhite;
+  .sup--title {
+    color: $fwhite;
+  }
+  .card--info {
+    color: $fwhite;
+  }
+  .price__btn {
+    color: $fwhite;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      background: #9f3919;
+    }
+  }
 }
 
 //prices
@@ -221,8 +244,10 @@ body {
   background: #f7f7fb;
   border-radius: 10px;
   border-style: none;
+  border-color: initial;
   color: $mtc;
   font-weight: 700;
+  outline: none;
   transition: 0.5s all ease-in-out;
   &:hover {
     background: $color1;
@@ -232,6 +257,7 @@ body {
 .prices__active {
   background-color: $color2;
   color: $fwhite;
+  outline: initial;
 }
 
 .sup--title {

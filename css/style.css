@@ -61,6 +61,11 @@ body {
   line-height: 1.4;
 }
 
+.btn-check:focus + .btn-primary,
+.btn-primary:focus {
+  border-color: initial;
+}
+
 .btn.btn-lg.btn-primary.ipsum__btn {
   background: #ff7143;
   color: #fff;
@@ -191,6 +196,7 @@ body {
 
 .card {
   border-style: none;
+  padding: 2em 0;
 }
 
 .card-title {
@@ -203,7 +209,29 @@ body {
 .card-text {
   font-size: 16px;
   line-height: 24px;
-  color: #696871;
+}
+
+.card__active {
+  background: #ff7143;
+  color: #fff;
+}
+
+.card__active .sup--title {
+  color: #fff;
+}
+
+.card__active .card--info {
+  color: #fff;
+}
+
+.card__active .price__btn {
+  color: #fff;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.card__active .price__btn:hover {
+  background: #9f3919;
 }
 
 .prices {
@@ -229,8 +257,10 @@ body {
   background: #f7f7fb;
   border-radius: 10px;
   border-style: none;
+  border-color: initial;
   color: #19191b;
   font-weight: 700;
+  outline: none;
   -webkit-transition: 0.5s all ease-in-out;
   transition: 0.5s all ease-in-out;
 }
@@ -242,6 +272,7 @@ body {
 .prices__active {
   background-color: #5454d4;
   color: #fff;
+  outline: initial;
 }
 
 .sup--title {
