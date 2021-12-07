@@ -194,9 +194,38 @@ body {
   margin-top: 5em;
 }
 
-.card {
+.card.card__prices {
   border-style: none;
   padding: 2em 0;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.card.card__prices:hover {
+  background: #ff7143;
+  color: #fff;
+  border-radius: 2%;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.card.card__prices:hover .sup--title,
+.card.card__prices:hover .card--title,
+.card.card__prices:hover .card--info,
+.card.card__prices:hover .text-muted {
+  color: #fff !important;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.card.card__prices:hover .price__btn {
+  color: #fff;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.card.card__prices:hover .price__btn:hover {
+  background: #9f3919;
 }
 
 .card-title {

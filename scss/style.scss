@@ -185,9 +185,31 @@ body {
   margin-top: 5em;
 }
 
-.card {
+.card.card__prices {
   border-style: none;
   padding: 2em 0;
+  transition: all 0.5s ease-in-out;
+  &:hover {
+    background: $color1;
+    color: $fwhite;
+    border-radius: 2%;
+    transition: all 0.3s ease-in-out;
+    .sup--title,
+    .card--title,
+    .card--info,
+    .text-muted {
+      color: $fwhite !important;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .price__btn {
+      color: $fwhite;
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        background: #9f3919;
+      }
+    }
+  }
 }
 
 .card-title {
