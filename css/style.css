@@ -194,9 +194,14 @@ body {
   margin-top: 5em;
 }
 
+.cards .card-body {
+  outline: 1px solid #fff;
+}
+
 .card.card__prices {
   border-style: none;
   padding: 2em 0;
+  cursor: pointer;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
@@ -290,18 +295,27 @@ body {
   color: #19191b;
   font-weight: 700;
   outline: none;
-  -webkit-transition: 0.5s all ease-in-out;
-  transition: 0.5s all ease-in-out;
+  -webkit-transition: 0.1s all ease-in-out;
+  transition: 0.1s all ease-in-out;
 }
 
 .btn-primary:hover {
-  background: #ff7143;
+  background: #5454d4;
+}
+
+button:focus:not(:focus-visible) {
+  outline: 2px solid #ff7143;
 }
 
 .prices__active {
   background-color: #5454d4;
   color: #fff;
   outline: initial;
+}
+
+.prices__btn:focus {
+  outline: 4px solid #ff7143;
+  background: #ff7143;
 }
 
 .sup--title {
