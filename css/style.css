@@ -43,8 +43,6 @@ a {
   color: inherit;
 }
 
-a:focus,
-button:focus,
 input:focus,
 select:focus,
 textarea:focus {
@@ -52,6 +50,11 @@ textarea:focus {
           box-shadow: none;
   outline: #000 dotted 2px;
   outline-offset: 0.05em;
+}
+
+button:focus:not(:focus-visible) {
+  outline: 1px solid #fff;
+  background: #5454d4;
 }
 
 body {
@@ -230,21 +233,20 @@ body {
   transition: 0.1s all ease-in-out;
 }
 
-button:focus:not(:focus-visible) {
-  outline: 2px solid #ff7143;
-}
-
+/* button:focus:not(:focus-visible) {
+  outline: 2px solid $color1;
+} */
 .prices__active {
   background-color: #5454d4;
   color: #fff;
   outline: initial;
 }
 
-.prices__btn:focus {
-  outline: 4px solid #ff7143;
-  background: #ff7143;
+/* .prices__btn:focus {
+  outline: 4px solid $color2;
+  background: $color2;
 }
-
+ */
 .sup--title {
   font-size: 18px;
   line-height: 28px;
