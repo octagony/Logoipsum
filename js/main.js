@@ -17,33 +17,4 @@ $(document).ready(function () {
         .append("<small class='text-muted'>/month</small>");
     }
   });
-
-  /*  cardsPrices.forEach()
-  $(".card.card__prices").on("mouseenter", function () {
-    if (!$(".card.card__prices").hasClass("card__active")) {
-      $(".card.card__prices").addClass("card__active");
-    } else {
-      $(".card.card__prices").removeClass("card__active");
-    }
-  });
-  $(".card.card__prices").on("mouseleave", function () {
-    if (!$(".card.card__prices").hasClass("card__active")) {
-      $(".card.card__prices").addClass("card__active");
-    } else {
-      $(".card.card__prices").removeClass("card__active");
-    }
-  }); */
 });
-
-const cardsPrices = document.querySelectorAll(".card__prices");
-cardsPrices.forEach((card, index) => {
-  card.onmouseover = () => {
-    setClass(index);
-  };
-});
-
-function setClass(index) {
-  for (let cardes of cardsPrices) {
-    cardes[index].classList.add(".card__active");
-  }
-}
